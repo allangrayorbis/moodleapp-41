@@ -223,7 +223,7 @@ export class CoreCustomURLSchemesProvider {
 
     /**
      * Get the data from a custom URL scheme. The structure of the URL is:
-     * moodlemobile://username@domain.com?token=TOKEN&privatetoken=PRIVATETOKEN&redirect=http://domain.com/course/view.php?id=2
+     * onlinecampus://username@domain.com?token=TOKEN&privatetoken=PRIVATETOKEN&redirect=http://domain.com/course/view.php?id=2
      *
      * @param url URL to treat.
      * @returns Promise resolved with the data.
