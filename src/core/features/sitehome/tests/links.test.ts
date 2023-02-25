@@ -24,7 +24,7 @@ describe('Site Home link handlers', () => {
 
     it('Handles links ending with /?redirect=0', async () => {
         // Arrange.
-        const siteUrl = 'https://school.moodledemo.net';
+        const siteUrl = 'https://learn.allangrayorbis.org';
         const siteId = CoreSites.createSiteID(siteUrl, 'student');
 
         mockSingleton(CoreSites, mock({
@@ -36,7 +36,7 @@ describe('Site Home link handlers', () => {
         CoreContentLinksDelegate.registerHandler(new CoreSiteHomeIndexLinkHandlerService());
 
         // Act.
-        await CoreCustomURLSchemes.handleCustomURL(`moodlemobile://link=${siteUrl}/?redirect=0`);
+        await CoreCustomURLSchemes.handleCustomURL(`onlinecampus://link=${siteUrl}/?redirect=0`);
 
         // Assert.
         expect(CoreNavigator.navigateToSitePath).toHaveBeenCalledWith('/home/site', {

@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="41001" id="org.allangrayorbis.onlinecampus" ios-CFBundleVersion="4.1.0.1" version="4.1.0" versionCode="41001" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-versionCode="41101" id="org.allangrayorbis.onlinecampus" ios-CFBundleVersion="4.1.1.1" version="4.1.1" versionCode="41101" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>AGOF Online Campus</name>
-    <description>Allan Gray Orbis Online Campus</description>
-    <author email="appstore@elevatelearning.dev" href="https://www.elevatelearning.org">Elevate Learning</author>
+    <description>Allan Gray Orbis Foundation Online Campus</description>
+    <author email="development@allangrayorbis.org" href="https://allangrayorbis.org">Allan Gray Orbis Foundation</author>
     <content src="index.html" />
     <access origin="*" />
     <access launch-external="yes" origin="tel:*" />
@@ -27,7 +27,7 @@
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="prerendered-icon" value="true" />
-    <preference name="AppendUserAgent" value="MoodleMobile 4.1.0 (41001)" />
+    <preference name="AppendUserAgent" value="MoodleMobile 4.1.1 (41101)" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="ScrollEnabled" value="false" />
     <preference name="KeyboardDisplayRequiresUserAction" value="false" />
@@ -40,7 +40,7 @@
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="android-minSdkVersion" value="22" />
-    <preference name="android-targetSdkVersion" value="31" />
+    <preference name="android-targetSdkVersion" value="33" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <preference name="AndroidInsecureFileModeEnabled" value="true" />
     <preference name="CustomURLSchemePluginClearsAndroidIntent" value="true" />
@@ -260,7 +260,7 @@
             <true />
         </edit-config>
         <edit-config file="*-Info.plist" mode="merge" target="CFBundleShortVersionString">
-            <string>4.1.0</string>
+            <string>4.1.1</string>
         </edit-config>
         <edit-config file="*-Info.plist" mode="overwrite" target="CFBundleLocalizations">
             <array>

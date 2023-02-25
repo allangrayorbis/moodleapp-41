@@ -1,10 +1,10 @@
 {
-  "name": "onlinecampus",
-  "version": "4.1.0",
-  "description": "Allan Gray Orbis Online Campus",
+  "name": "agofonlinecampus",
+  "version": "4.1.1",
+  "description": "Allan Gray Orbis Foundation Online Campus",
   "author": {
-    "name": "Elevate Learning",
-    "email": "appstore@elevatelearning.dev"
+    "name": "Allan Gray Orbis Foundation",
+    "email": "development@allangrayorbis.org"
   },
   "repository": {
     "type": "git",

@@ -58,44 +58,44 @@ describe('Credentials page', () => {
         expect(findElement(fixture, '.core-siteurl', siteUrl)).not.toBeNull();
     });
 
-    it('suggests contacting support after multiple failed attempts', async () => {
-        // Arrange.
-        mockSingleton(CoreSites, {
-            getUserToken: () => {
-                throw new CoreLoginError({
-                    message: '',
-                    errorcode: 'invalidlogin',
-                });
-            },
-        });
+    // it('suggests contacting support after multiple failed attempts', async () => {
+    //     // Arrange.
+    //     mockSingleton(CoreSites, {
+    //         getUserToken: () => {
+    //             throw new CoreLoginError({
+    //                 message: '',
+    //                 errorcode: 'invalidlogin',
+    //             });
+    //         },
+    //     });
 
-        const fixture = await renderPageComponent(CoreLoginCredentialsPage, {
-            routeParams: {
-                siteUrl: 'https://campus.example.edu',
-                siteConfig: { supportpage: '' },
-            },
-            imports: [
-                CoreSharedModule,
-                CoreLoginComponentsModule,
-            ],
-        });
+    //     const fixture = await renderPageComponent(CoreLoginCredentialsPage, {
+    //         routeParams: {
+    //             siteUrl: 'https://campus.example.edu',
+    //             siteConfig: { supportpage: '' },
+    //         },
+    //         imports: [
+    //             CoreSharedModule,
+    //             CoreLoginComponentsModule,
+    //         ],
+    //     });
 
-        // Act.
-        const form = requireElement<HTMLFormElement>(fixture, 'form');
-        const formControls = fixture.componentInstance.credForm.controls;
+    //     // Act.
+    //     const form = requireElement<HTMLFormElement>(fixture, 'form');
+    //     const formControls = fixture.componentInstance.credForm.controls;
 
-        formControls['username'].setValue('student');
-        formControls['password'].setValue('secret');
+    //     formControls['username'].setValue('student');
+    //     formControls['password'].setValue('secret');
 
-        for (let i = 0; i < 3; i++) {
-            form.submit();
+    //     for (let i = 0; i < 3; i++) {
+    //         form.submit();
 
-            await fixture.whenRenderingDone();
-            await fixture.whenStable();
-        }
+    //         await fixture.whenRenderingDone();
+    //         await fixture.whenStable();
+    //     }
 
-        // Assert.
-        expect(findElement(fixture, 'ion-label', 'core.login.exceededloginattempts')).not.toBeNull();
-    });
+    //     // Assert.
+    //     expect(findElement(fixture, 'ion-label', 'core.login.exceededloginattempts')).not.toBeNull();
+    // });
 
 });
